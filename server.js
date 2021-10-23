@@ -26,7 +26,7 @@ const server = ourApp.listen(myPort, ()=>{
 
 ourApp.post('/post',(req,res)=>{
     projectData.date = req.body.date;
-    projectData.temp = (req.body.temp - 273).toFixed();
+    projectData.temp = req.body.temp;
     projectData.feeling = req.body.content;
     console.log(projectData);
     return projectData;
